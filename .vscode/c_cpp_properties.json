@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceRoot}"
             ],
             "defines": [
                 "_DEBUG",
@@ -20,10 +20,10 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "compilerPath": "C:/MinGW/bin/gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         }
     ],
     "version": 4

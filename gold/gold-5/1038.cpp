@@ -13,27 +13,15 @@ int com(int n, int r){
 
     return x;
 }
-/*
-void DFS_2(int m, int t, int c){
-    if(t==0) return;
-    for(int i=0;i<m;i++){
-        if(c > com(i, t-1)) c -= com(i, t-1);
-        else{
-            ans.push(i);
-            DFS_2(i, t-1, c);
-            break;
-        }
-    }
-}
-*/
-void DFS_2(int m, int t, int c){
+
+void DFS(int m, int t, int c){
     if(t==0) return;
 
     for(int i=0;i<m;i++){
         if(c > com(i, t-1)) c -= com(i, t-1);
         else{
             ans.push(i);
-            DFS_2(i, t-1, c);
+            DFS(i, t-1, c);
             break;
         }
     }
@@ -62,8 +50,7 @@ int main(void){
         return 0;
     }
 
-    //printf("%d %d %d\n", i, n, tc);
-    DFS_2(10, i, n-tc);
+    DFS(10, i, n-tc);
 
     while(!ans.empty()){
         printf("%d", ans.front());
