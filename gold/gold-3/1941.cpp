@@ -63,14 +63,11 @@ void DFS(int mn, int k){
         inc_ans();
         return;
     }
-
-    for(int i=0;i<5;i++){
-        for(int j=0;j<5;j++){
-            if(mn < 5*i+j && !check[i][j]){
-                check[i][j] = true;
-                DFS(5*i+j, k+1);
-                check[i][j] = false;
-            }
+    for(int n=0;n<25;n++){
+        if(mn < n && !check[n/5][n%5]){
+            check[n/5][n%5] = true;
+            DFS(n, k+1);
+            check[n/5][n%5] = false;
         }
     }
 }
