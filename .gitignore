@@ -1,0 +1,5 @@
+*.exe
+*.json
+.vscode/
+*/**/tempCodeRunnerFile.cpp
+short/
