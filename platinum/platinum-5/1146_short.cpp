@@ -1,2 +1,0 @@
-#include<iostream>
-long M=1000000,n,d[105][2]={1,1,1,1},m[105][99],i,j;int c(int k,int r){if(r*(k-r))return m[k][r]=m[k][r]?:c(k-1,r-1)+c(k-1,r)%M;return 1;}main(){std::cin>>n;if(n-1){for(;++i<n;)for(j=-1;++j<=i;){d[i+1][j%2]+=d[j][j%2]*c(i,j)%M**d[i-j]%M;}std::cout<<(*d[n]+d[n][1])%M;}else puts("1");}
