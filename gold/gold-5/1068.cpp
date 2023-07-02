@@ -26,16 +26,17 @@ int main(void){
     scanf("%d", &del);
 
     int ans = 0;
+    q.push(root);
     while(!q.empty()){
         int node = q.front();
         q.pop();
 
         if(node == del) continue;
-        if(tree[node].empty()){
+        if(tree[node].empty() || (tree[node].size()==1&&tree[node][0]==del)){
             ans++;
             continue;
         }
-        
+
         for(int i=0;i<tree[node].size();i++){
             q.push(tree[node][i]);
         }
