@@ -6,10 +6,6 @@ int n, root, del;
 vector<int> tree[55];
 queue<int> q;
 
-bool cmp(pair<int, int> a, pair<int, int> b){
-    return a.first < b.first;
-}
-
 int main(void){
     scanf("%d", &n);
 
