@@ -1,4 +1,5 @@
-#include<cstdio>
+#include<bits/stdc++.h>
+
 int mil=1000000;
 int n;
 int dp[2][105];
