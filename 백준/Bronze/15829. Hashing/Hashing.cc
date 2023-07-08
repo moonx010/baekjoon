@@ -14,7 +14,11 @@ int main() {
   string s;
   cin >> n >> s;
   for (int i = 0; i < n; i++) {
-    ans += (s[i] - 'a' + 1) * pow(31, i);
+    int x = s[i] - 'a' + 1;
+    for (int j = 0; j < i; j++) {
+      x = (x * 31) % 1234567891;
+    }
+    ans += x;
   }
   cout << ans;
 }
