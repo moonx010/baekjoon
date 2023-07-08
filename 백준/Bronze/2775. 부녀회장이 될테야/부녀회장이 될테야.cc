@@ -15,18 +15,17 @@ int main() {
   for (int i = 0; i < t; i++) {
     int k, n;
     cin >> k >> n;
-    long long int x[15][15];
+    long long int x[15];
     for (int i = 1; i <= n; i++) {
-      x[0][i] = i;
+      x[i] = i;
     }
     for (int floor = 1; floor <= k; floor++) {
+      long long int m = 0;
       for (int d = 1; d <= n; d++) {
-        if (d == 1)
-          x[floor][d] = 1;
-        else
-          x[floor][d] = x[floor][d - 1] + x[floor - 1][d];
+        m += x[d];
+        x[d] = m;
       }
     }
-    cout << x[k][n] << "\n";
+    cout << x[n] << "\n";
   }
 }
