@@ -25,7 +25,6 @@ int main() {
         string S;
         getline(cin, S);
 
-        // S가 공약 목록에 존재하는지 확인
         if (find(rick_astley_promises.begin(), rick_astley_promises.end(), S) == rick_astley_promises.end()) {
             changed = true;
             break;
